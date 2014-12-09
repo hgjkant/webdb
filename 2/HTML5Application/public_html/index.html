@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Entry page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <LINK href="css/index.css" rel="stylesheet" type="text/css">
+        <script type='text/javascript' src='js/index.js'></script>
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        
+    </head>
+    <body>
+        <div class='header'>
+            <a class='header_title' href='index.html'><img src='images/Logo.png' alt="toddos" /></a>
+        </div>
+
+        <div id="form-container">
+            <div id="form">
+                <section class="loginform cf">
+                    <form name="login" action="index_submit" method="get" accept-charset="utf-8">
+                        <label data-name="Enter your email-address" class="hoverlabel">
+                            <input id="email" class="inputfields" type="email" name="usermail" placeholder="yourname@email.com" required>
+                        </label>
+                        <label data-name="Enter your password" class="hoverlabel">
+                            <input id="password" class="inputfields" type="password" name="password" placeholder="password" required>
+                        </label>
+                        <br>
+                        <div id="rememberme">
+                            <label><INPUT type="checkbox" name="rememberme" value="rm"> Remember Me</label>
+                        </div>
+                        <input class="submits" type="submit" value="Register" />
+                        <input class="submits" type="submit" value="Login" />
+                        <div class='content'>
+                            <a class='login_button' href='todo.html'>TEST EXAMPLE GOO!</a>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+
+        <div class='footer'><center>&copy;2014 TODDOS</center>
+        </div>
+    </body>
+</html>

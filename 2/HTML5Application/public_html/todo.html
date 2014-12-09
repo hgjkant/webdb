@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<!--
+Please note that most classes and/or id's are in place to be used by javascript for now.
+Also, please not that some aspects are not easily visible without the use of css, although the
+appropriate classes have been set in html or javascript.
+
+This page describes the main page of the todo app
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--        <LINK href="css/todo.css" rel="stylesheet" type="text/css">
+                <LINK href="css/datepicker.css" rel="stylesheet" type="text/css">-->
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+        <script type='text/javascript' src='js/toddos.js'></script>
+        <script type='text/javascript' src='js/item.js'></script>
+        <!--<LINK href="css/print.css" rel="stylesheet" type="text/css">-->
+    </head>
+    <body>
+        <header class='header'>
+            <a class='header_title' href='index.html'><img src='images/Logo.png' alt="toddos" /></a>
+            <label for="Welcome">Welcome user! </label>
+            <select>
+                <option></option>
+                <option>Settings</option>
+                <option>Logout</option>
+            </select>
+        </header>
+        <main>
+            <div id="views">
+                <div id="tasks">
+                    <div class="header">
+                        <!-- A -->
+                        <h1>Todo list:</h1>
+                        <form id="new-form">
+                            <input id="new-text" type="text" placeholder="What needs to be done?">
+                            <input id="new-duedate" type="text" placeholder="Due date (dd-mm-yy)">
+                            <select id="new-priority">
+                                <option value="0">Select priority</option>
+                                <option value="3">Priority high</option>
+                                <option value="2">Priority med</option>
+                                <option value="1">Priority low</option>
+                            </select>
+                            <button id="new-add" type="button">Add </button>
+                        </form>
+                    </div>
+
+                    <div id="main">
+                        <!-- The dropdowns with the possible actions -->
+                        <div id="selects">
+                            <button id="selectAll" type="button">(Un)Check All</button>
+                            <select id="main-sort">
+                                <option value="0">Sort task list on: </option>
+                                <option value="1">date (asc)</option>
+                                <option value="2">date (desc)</option>
+                                <option value="3">priority (asc)</option>
+                                <option value="4">priority (desc)</option>
+                            </select>
+
+                            <select id="main-action">
+                                <option value="0">Choose action..</option>
+                                <option value="1">Delete</option>
+                                <option value="2">Mark done</option>
+                                <option value="3">Mark undone</option>
+                                <option value="4">Priority high</option>
+                                <option value="5">Priority med</option>
+                                <option value="6" >Priority low</option>
+                                <option value="7" >Priority non</option>
+                            </select>
+
+                            <button id="delete" type="button">Delete</button>
+                        </div>
+                        <!-- The main list with the todo items in it, below the dropdowns and other actions -->
+                        <div id='mainlist' class="items">
+                        </div>
+
+                        <!-- The edit panel. This is shown when 1 todo
+                        item is selected to edit the item -->
+                        <div id ='comment' class="comment">
+                            <label class="details-label">
+                                Item text:
+                                <br>
+                                <textarea id="details-text"></textarea>
+                            </label>
+                            <label class="details-label">
+                                Item duedate:
+                                <br>
+                                <input id="details-duedate" type="text">
+                            </label>
+                            <label class="details-label">
+                                Item priority:
+                                <br>
+                                <select id="details-priority">
+                                    <option value="0"></option>
+                                    <option value="3">Priority high</option>
+                                    <option value="2">Priority med</option>
+                                    <option value="1">Priority low</option>
+                                </select>
+                                <button id="updateTask" type="button">Save changes</button>
+                                <button id="cancel" type="button">Cancel</button>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <footer class='footer'>&copy;2014 TODDOS
+        </footer>
+
+    </body>
+</html>
